@@ -56,23 +56,22 @@ async function getAllProducts() {
             </p>
             </div>
             <div class="mb-2 bg-transparent shadow-none border-0">
-            <a
+            
+            <button
             id="addBtn-${product.id}"
-                class="btn btn-primary"
-               
-                
-                >Add to Card</a
-            >
+                class="btn btn-primary addBtn"
+                >Add to Card
+            </button>
             <a
                 class="btn btn-primary ms-2 details"
-                href="/productDetails.html" 
-                >Details</a
-            >
+                href="productDetails.html" 
+                >Details
+            </a>
             <div>
                 <div
                 id="addToCartDiv-${product.id}"
                 class="d-none d-flex  justify-content-around align-items-center"
-                  
+                
                 >
                 <input
                     type="number"
@@ -104,16 +103,18 @@ async function getAllProducts() {
 
 getAllProducts();
 
-// function disAppear(eventt) {
-//     ev
-//   for (let i = 0; i < allProducts.length; i++) {
-//     const product = allProducts[i];
-//     let addBtn = document.getElementById(`addBtn-${product.id}`);
-//     let addToCartDiv = document.getElementById(`addToCartDiv-${product.id}`);
-//     // addBtn.classList.toggle("d-none");
-//     addBtn.style.display = "none";
-//     console.log("none");
-//     //   addToCartDiv.classList.toggle("display-none");
+let addBtns = document.getElementsByClassName("addBtn");
 
-//   }
-// }
+console.log(addBtns);
+function name1() {
+  for (let i = 0; i < addBtns.length; i++) {
+    debugger
+    addBtns[i].onclick = function () {
+      btn.classList.add("d-none");
+      console.log("done");
+    }
+
+  }
+}
+name1();
+
